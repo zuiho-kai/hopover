@@ -34,7 +34,9 @@ A Mac and a Windows PC on the same desk? Hopover makes them feel like two screen
 
 ### One keyboard and mouse, two computers
 
-Plug the keyboard and mouse into the Mac. **Double-tap ⌃ Control** on the Mac to turn sharing on: move past the edge and you are on Windows. Double-tap again to turn it off so the cursor never wanders over by accident. Locking the screen turns it off too.
+**Double-tap ⌃ Control** on the Mac to turn sharing on: move the Mac's mouse past the edge and you are on Windows, keyboard included. Double-tap again to turn it off so the cursor never wanders over by accident. Locking the screen turns it off too.
+
+**A mouse on each computer works too** (0.9.2 and later): push the Windows mouse off the screen toward the Mac and it carries on there, files included. Touch the Mac's mouse and the Windows mouse goes back to Windows only.
 
 ### Drag a file over, drop it in any folder
 
@@ -134,12 +136,20 @@ Open an [issue](https://github.com/zuiho-kai/hopover/issues) and attach the logs
 
 ### Current limits
 
-- One Mac and one Windows PC on the same local network, keyboard and mouse plugged into the Mac.
-- Apple Silicon Macs only. Intel Macs and keyboard/mouse on the Windows side are planned.
+- One Mac and one Windows PC on the same local network.
+- Only the Mac's keyboard crosses over; the Windows mouse works on the Mac, the Windows keyboard not yet.
+- Apple Silicon Macs only. Intel Macs are planned.
 
 ---
 
 ## Changelog
+
+**0.9.2**
+- New: the Windows mouse can move onto the Mac and drag files straight into any Mac folder.
+- Fixed: quitting Hopover on Windows left the mouse shared.
+- Fixed: pushing a file into the edge with the Windows mouse did nothing; it now sends right away.
+- Fixed: dragging to Windows and back to the Mac without letting go left a drag stuck on Windows.
+- Improved: snappier edge crossing (250 ms → 100 ms); logs rotate at 1 MB.
 
 **0.9.1**
 - Fixed: on the Mac, turning sharing on sometimes did nothing until you tried again (the bundled Deskflow crashed at random on macOS 27).
