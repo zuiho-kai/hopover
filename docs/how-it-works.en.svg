@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <style>
+    .card { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.5; }
+    .inner { fill: #f3f6fa; stroke: #d0d7de; }
+    .accent { fill: #e8f1ff; stroke: #2f80ed; }
+    .h { font-size: 20px; font-weight: 700; fill: #1f2328; }
+    .t { font-size: 14px; fill: #1f2328; }
+    .s { font-size: 12px; fill: #59636e; }
+    .wire { stroke: #2f80ed; stroke-width: 2.5; fill: none; }
+    .wire2 { stroke: #1a7f37; stroke-width: 2.5; fill: none; }
+    .wire3 { stroke: #8c959f; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+    .lbl { font-size: 13px; fill: #1f2328; }
+    .lbls { font-size: 11.5px; fill: #59636e; }
+    .bg { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .card { fill: #161b22; stroke: #3d444d; }
+      .inner { fill: #0d1117; stroke: #3d444d; }
+      .accent { fill: #0c2d6b; stroke: #4493f8; }
+      .h, .t, .lbl { fill: #e6edf3; }
+      .s, .lbls { fill: #9198a1; }
+      .wire { stroke: #4493f8; }
+      .wire2 { stroke: #3fb950; }
+      .bg { fill: #0d1117; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="360" rx="16"/>
+
+  <!-- Mac -->
+  <rect class="card" x="24" y="24" width="300" height="312" rx="14"/>
+  <text class="h" x="44" y="58">Mac</text>
+  <text class="s" x="98" y="58">keyboard & mouse plugged in here</text>
+  <rect class="accent" x="44" y="80" width="260" height="70" rx="10"/>
+  <text class="t" x="60" y="108">Hopover (menu bar)</text>
+  <text class="s" x="60" y="130">sharing toggle · drop panel · inbox cards</text>
+  <rect class="inner" x="44" y="166" width="260" height="70" rx="10"/>
+  <text class="t" x="60" y="194">Deskflow server</text>
+  <text class="s" x="60" y="216">captures input, switches at the screen edge</text>
+  <rect class="inner" x="44" y="252" width="260" height="64" rx="10"/>
+  <text class="t" x="60" y="278">Seamless drag hand-off</text>
+  <text class="s" x="60" y="298">holds the file until you let go over there</text>
+
+  <!-- Windows -->
+  <rect class="card" x="636" y="24" width="300" height="312" rx="14"/>
+  <text class="h" x="656" y="58">Windows</text>
+  <rect class="accent" x="656" y="80" width="260" height="70" rx="10"/>
+  <text class="t" x="672" y="108">Hopover (tray)</text>
+  <text class="s" x="672" y="130">pairing · drop panel · inbox cards</text>
+  <rect class="inner" x="656" y="166" width="260" height="70" rx="10"/>
+  <text class="t" x="672" y="194">Deskflow client</text>
+  <text class="s" x="672" y="216">injects input into Windows</text>
+  <rect class="inner" x="656" y="252" width="260" height="64" rx="10"/>
+  <text class="t" x="672" y="278">Admin helper (optional)</text>
+  <text class="s" x="672" y="298">lets the mouse reach elevated windows</text>
+
+  <!-- wires -->
+  <path class="wire" d="M304 201 L656 201"/>
+  <text class="lbl" x="480" y="190" text-anchor="middle">Keyboard & mouse</text>
+  <text class="lbls" x="480" y="222" text-anchor="middle">TCP 24800 · TLS with mutual fingerprint check</text>
+
+  <path class="wire2" d="M304 115 L656 115"/>
+  <text class="lbl" x="480" y="104" text-anchor="middle">Files</text>
+  <text class="lbls" x="480" y="136" text-anchor="middle">TCP 47820 · token derived at pairing</text>
+
+  <path class="wire3" d="M656 284 L304 284" marker-end="url(#a)"/>
+  <text class="lbl" x="480" y="273" text-anchor="middle">Discovery (pairing only)</text>
+  <text class="lbls" x="480" y="305" text-anchor="middle">UDP 47821 · ECDH + 6-digit comparison</text>
+</svg>
