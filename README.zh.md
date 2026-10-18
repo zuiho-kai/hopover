@@ -73,6 +73,8 @@
 | **Mac** | Apple 芯片，macOS 14 或更新 | 打开 `Hopover-…-macos-arm64.dmg`，把 Hopover 拖进「应用程序」，再打开它 |
 | **Windows** | Windows 10 / 11，64 位 | 把 `Hopover-…-windows-x64.zip` 解压到一个固定位置，双击 `Hopover.exe` |
 
+Mac 也可以用 Homebrew 安装：`brew install --cask zuiho-kai/tap/hopover`
+
 > 预览版还没有做苹果公证和 Windows 代码签名，第一次打开会被系统拦一下：
 > Mac 上到「系统设置 → 隐私与安全性」点 **仍要打开**；Windows 上点 **更多信息 → 仍要运行**。
 

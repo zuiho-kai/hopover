@@ -73,6 +73,8 @@ With sharing off, drop a file on the panel at the screen edge and a card pops up
 | **Mac** | Apple Silicon, macOS 14 or later | Open `Hopover-…-macos-arm64.dmg`, drag Hopover into Applications, open it |
 | **Windows** | Windows 10 / 11, 64-bit | Unzip `Hopover-…-windows-x64.zip` to a permanent place, run `Hopover.exe` |
 
+On the Mac you can also install with Homebrew: `brew install --cask zuiho-kai/tap/hopover`
+
 > Preview builds are not notarized or code-signed yet, so the system stops them once:
 > on the Mac use **System Settings → Privacy & Security → Open Anyway**; on Windows **More info → Run anyway**.
 
